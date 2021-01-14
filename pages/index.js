@@ -37,7 +37,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-import mouseStyle from "../styles/mouse.module.css";
 import UlgModal from "../components/modals/ulgmodals";
 //Images
 import headshot from "../public/assets/HeadshotPicture.png";
