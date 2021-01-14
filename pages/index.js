@@ -433,7 +433,6 @@ export default function Home(props) {
                         color="blue.700"
                         borderRadius="fill"
                         boxSize="70px"
-                        bg="black"
                         // mt={["7px", "7px", "0px", "0px", "0px"]}
                         icon={<FaGithub size={"38px"} />}
                       />
@@ -448,7 +447,6 @@ export default function Home(props) {
                         _active={{ border: "0" }}
                         _focus={{ border: "0" }}
                         boxSize="70px"
-                        bg="black"
                         // bg="white"
                         color="blue.700"
                         icon={<TiSocialLinkedinCircular size="56px" />}
