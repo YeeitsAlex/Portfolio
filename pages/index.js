@@ -453,7 +453,7 @@ export default function Home(props) {
             </ListItem>
             <ListItem
               id="experience"
-              height={["auto", "auto", "auto", "800px", "800px"]}
+              height={["400px", "400px", "400px", "800px", "800px"]}
             >
               <Divider color={"gray.500"} />
               <Box pl={["20px", "20px", "45px", "45px", "45px"]} pr="20px">
