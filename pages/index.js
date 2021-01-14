@@ -449,7 +449,7 @@ export default function Home(props) {
                         boxSize="70px"
                         bg="white"
                         color="blue.700"
-                        icon={<TiSocialLinkedinCircular size="56px" />}
+                        icon={<TiSocialLinkedinCircular size="52px" />}
                       />
                     </Link>
                   </Box>
