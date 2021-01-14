@@ -413,7 +413,7 @@ export default function Home(props) {
                   >
                     <Text
                       mt="20px"
-                      mb={["20px", "20px", "30px", "30px", "30px"]}
+                      // mb={["20px", "20px", "30px", "30px", "30px"]}
                       fontSize={["10px", "10x", "18px", "18px", "18px"]}
                       color="blue.800"
                       _hover={{ color: "red.500" }}
@@ -423,7 +423,7 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-                  <Box mt="10px" display="flex" flexDirection="row">
+                  <Box mt="30px" display="flex" flexDirection="row">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
                         _hover={{ color: "red.500" }}
