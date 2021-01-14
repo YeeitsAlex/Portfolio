@@ -432,12 +432,13 @@ export default function Home(props) {
                         bg="white"
                         color="blue.700"
                         boxSize="50px"
+                        // mt={["7px", "7px", "0px", "0px", "0px"]}
                         icon={<FaGithub size={"38px"} />}
                       />
                     </Link>
                     <Link
                       href="https://www.linkedin.com/in/yee-alexander/"
-                      px="5px"
+                      ml="5px"
                     >
                       <IconButton
                         _hover={{ color: "red.500" }}
