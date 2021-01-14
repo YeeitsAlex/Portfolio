@@ -444,7 +444,7 @@ export default function Home(props) {
                         _hover={{ color: "red.500" }}
                         _active={{ border: "0" }}
                         _focus={{ border: "0" }}
-                        boxSize="50px"
+                        boxSize={["30px", "30px", "50px", "50px", "50px"]}
                         bg="white"
                         color="blue.700"
                         icon={<TiSocialLinkedinCircular size="58px" />}
