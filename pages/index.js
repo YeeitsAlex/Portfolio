@@ -431,7 +431,7 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        icon={<FaGithub size={"38px"} />}
+                        icon={<FaGithub size={"36px"} />}
                       />
                     </Link>
                     <Link
@@ -444,8 +444,8 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        mt={["-10px", "-10px", "", "", ""]}
-                        icon={<TiSocialLinkedinCircular size="50px" />}
+                        // mt={["-10px", "-10px", "", "", ""]}
+                        icon={<TiSocialLinkedinCircular size="48px" />}
                       />
                     </Link>
                   </List>
