@@ -444,7 +444,7 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        mb={["10px", "10px", "", "", ""]}
+                        mb={["40px", "40px", "", "", ""]}
                         icon={<TiSocialLinkedinCircular size="48px" />}
                       />
                     </Link>
