@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/fonts/OpenSans-Regular.ttf");
+  font-style: normal;
+  /* font-weight: 400; */
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("/fonts/OpenSans-SemiBold.ttf");
+  font-style: normal;
+  /* font-weight: 500; */
+  font-display: swap;
+}
+@font-face {
+  font-family: "SairaExtraCondensed-SemiBold";
+  src: url("/fonts/SairaExtraCondensed-SemiBold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SairaCondensed-SemiBold";
+  src: url("/fonts/SairaExtraCondensed-SemiBold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
