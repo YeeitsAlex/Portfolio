@@ -292,7 +292,7 @@ export default function Home(props) {
           >
             <ListItem
               pb="100px"
-              height={["500px", "500px", "500px", "800px", "800px"]}
+              height={["300px", "300px", "800px", "800px", "800px"]}
             >
               <Flex
                 width={["100%", "100%", "100%", "100%", "100%"]}
@@ -423,7 +423,7 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-                  <Box display="flex" height="200px">
+                  <List mt="10px">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
                         _hover={{ color: "red.500" }}
@@ -447,7 +447,7 @@ export default function Home(props) {
                         icon={<TiSocialLinkedinCircular size="62px" />}
                       />
                     </Link>
-                  </Box>
+                  </List>
                 </Flex>
               </Flex>
             </ListItem>
