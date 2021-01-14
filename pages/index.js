@@ -292,7 +292,7 @@ export default function Home(props) {
           >
             <ListItem
               pb="100px"
-              height={["300px", "300px", "800px", "800px", "800px"]}
+              height={["500px", "500px", "800px", "800px", "800px"]}
             >
               <Flex
                 width={["100%", "100%", "100%", "100%", "100%"]}
@@ -423,7 +423,7 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-                  <List mt="10px">
+                  <List mt="10px" height="100px">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
                         _hover={{ color: "red.500" }}
