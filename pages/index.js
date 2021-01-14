@@ -423,7 +423,6 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-
                   <List mt="10px">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
