@@ -423,7 +423,7 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-                  <Box display="flex">
+                  <Box display="flex" height="200px">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
                         _hover={{ color: "red.500" }}
