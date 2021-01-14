@@ -437,6 +437,7 @@ export default function Home(props) {
                     <Link
                       href="https://www.linkedin.com/in/yee-alexander/"
                       px="5px"
+                      pb="10px"
                     >
                       <IconButton
                         _hover={{ color: "red.500" }}
