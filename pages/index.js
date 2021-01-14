@@ -431,7 +431,9 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        boxSize="50px"
+                        borderRadius="fill"
+                        boxSize="70px"
+                        bg="black"
                         // mt={["7px", "7px", "0px", "0px", "0px"]}
                         icon={<FaGithub size={"38px"} />}
                       />
@@ -441,13 +443,15 @@ export default function Home(props) {
                       ml="5px"
                     >
                       <IconButton
+                        borderRadius="fill"
                         _hover={{ color: "red.500" }}
                         _active={{ border: "0" }}
                         _focus={{ border: "0" }}
-                        boxSize={["30px", "30px", "50px", "50px", "50px"]}
-                        bg="white"
+                        boxSize="70px"
+                        bg="black"
+                        // bg="white"
                         color="blue.700"
-                        icon={<TiSocialLinkedinCircular size="58px" />}
+                        icon={<TiSocialLinkedinCircular size="56px" />}
                       />
                     </Link>
                   </Box>
