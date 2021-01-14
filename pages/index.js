@@ -590,7 +590,7 @@ export default function Home(props) {
                     manage relevant data synchronously/asynchronously
                   </ListItem>
                   <ListItem>
-                    Implementedmobile application using React-Native for the
+                    Implemented mobile application using React-Native for the
                     front-end connected to firebase database for the back-end
                   </ListItem>
                 </UnorderedList>
