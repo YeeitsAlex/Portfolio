@@ -423,7 +423,7 @@ export default function Home(props) {
                       View Resume as PDF
                     </Text>
                   </Link>
-                  <List mt="10px" height="200px">
+                  <List mt="10px" height="100px">
                     <Link href="https://github.com/YeeitsAlex">
                       <IconButton
                         _hover={{ color: "red.500" }}
@@ -431,7 +431,7 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        icon={<FaGithub size={"46px"} />}
+                        icon={<FaGithub size={"38px"} />}
                       />
                     </Link>
                     <Link
@@ -444,7 +444,7 @@ export default function Home(props) {
                         _focus={{ border: "0" }}
                         bg="white"
                         color="blue.700"
-                        icon={<TiSocialLinkedinCircular size="62px" />}
+                        icon={<TiSocialLinkedinCircular size="50px" />}
                       />
                     </Link>
                   </List>
@@ -453,7 +453,7 @@ export default function Home(props) {
             </ListItem>
             <ListItem
               id="experience"
-              height={["400px", "400px", "400px", "800px", "800px"]}
+              height={["auto", "auto", "auto", "800px", "800px"]}
             >
               <Divider color={"gray.500"} />
               <Box pl={["20px", "20px", "45px", "45px", "45px"]} pr="20px">
