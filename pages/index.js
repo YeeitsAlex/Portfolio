@@ -49,6 +49,7 @@ import qa from "../public/assets/ulg/QAScreen.png";
 import r from "../public/assets/react.png";
 import n from "../public/assets/next.png";
 import c from "../public/assets/chakra-ui.png";
+
 // Icons
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
@@ -407,7 +408,7 @@ export default function Home(props) {
 
                   <Link
                     width={["45%", "45%", "50%", "18%", "30%"]}
-                    href="https://drive.google.com/file/d/169C-dHgdR4BYDvVh6tzqOm0JOw30ipHs/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1b9kJvHPl-_V24JnY3Wc6qyXTbdkBRfsr/view?usp=sharing"
                     _focus={{ borderColor: "white" }}
                   >
                     <Text
