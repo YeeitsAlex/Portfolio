@@ -40,51 +40,61 @@ import reg from "../../public/assets/ulg/RegistrationPage.png";
 import post from "../../public/assets/ulg/PostScreen.png";
 import qa from "../../public/assets/ulg/QAScreen.png";
 
-const UlgModal = () => {
+import create from "../../public/assets/rmate/create.png";
+import drop from "../../public/assets/rmate/drop.png";
+import posts from "../../public/assets/rmate/post.png";
+import social from "../../public/assets/rmate/Social.png";
+import type from "../../public/assets/rmate/type.png";
+
+const RMateModal = () => {
   return (
     <Box>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>UCR Life Guide</ModalHeader>
+        <ModalHeader>Some of my work from RMate</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           {/* <UlgModal /> */}
           <Box display="flex" flexDirection="row" flexWrap="wrap">
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={reg}
+              src={social}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
+              height={["100%", "100%", "30%", "30%", "30%"]}
+              width={["100%", "100%", "30%", "30%", "30%"]}
             />
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={login}
+              src={posts}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
+              height={["100%", "100%", "30%", "30%", "30%"]}
+              width={["100%", "100%", "30%", "30%", "30%"]}
             />
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={home}
+              src={create}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
+              height={["100%", "100%", "30%", "30%", "30%"]}
+              width={["100%", "100%", "30%", "30%", "30%"]}
             />
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={parking}
+              src={drop}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
+              height={["100%", "100%", "30%", "30%", "30%"]}
+              width={["100%", "100%", "30%", "30%", "30%"]}
             />
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={post}
+              src={type}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
-            />
-            <Image
-              // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={qa}
-              mb={["", "", "30px", "30px", "30px"]}
-              mr={["0px", "0px", "7px", "7px", "7px"]}
+              height={["100%", "100%", "30%", "30%", "30%"]}
+              width={["100%", "100%", "30%", "30%", "30%"]}
             />
           </Box>
         </ModalBody>
@@ -93,4 +103,4 @@ const UlgModal = () => {
   );
 };
 
-export default UlgModal;
+export default RMateModal;
