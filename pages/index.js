@@ -28,27 +28,13 @@ import {
   TagLeftIcon,
   TagRightIcon,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
 
 import UlgModal from "../components/modals/ulgmodals";
+import RMateModal from "../components/modals/rmatemodal";
 //Images
 import headshot from "../public/assets/HeadshotPicture.png";
-import home from "../public/assets/ulg/HomeScreen.png";
-import login from "../public/assets/ulg/LoginPage.png";
-import parking from "../public/assets/ulg/ParkingScreen.png";
-import reg from "../public/assets/ulg/RegistrationPage.png";
-import post from "../public/assets/ulg/PostScreen.png";
-import qa from "../public/assets/ulg/QAScreen.png";
-import r from "../public/assets/react.png";
-import n from "../public/assets/next.png";
-import c from "../public/assets/chakra-ui.png";
 
 // Icons
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -64,21 +50,34 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { DiFirebase, DiNetbeans } from "react-icons/di";
 import Typing from "react-typing-animation";
 import { SiExpo, SiMongodb, SiPostgresql } from "react-icons/si";
-
 import { ImYoutube2 } from "react-icons/im";
 
 export default function Home(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [show, setShow] = React.useState(false);
-
+  const [modal, setModal] = React.useState("");
   const [link, setLink] = useState("about");
   const [toPrint, setPrint] = React.useState("Software Engineer");
+
   const setDescription = () => {
     if (toPrint === "Software Engineer") {
       setPrint("Frontend Developer");
     }
     if (toPrint === "Frontend Developer") {
       setPrint("Software Engineer");
+    }
+  };
+
+  const handleModal = (item) => {
+    setModal(item);
+  };
+
+  const getModal = () => {
+    if (modal === "ulg") {
+      return <UlgModal />;
+    }
+    if (modal === "rmate") {
+      return <RMateModal />;
     }
   };
 
@@ -432,7 +431,7 @@ export default function Home(props) {
                         bg="white"
                         color="blue.700"
                         borderRadius="fill"
-                        boxSize="70px"
+                        boxSize="50px"
                         // mt={["7px", "7px", "0px", "0px", "0px"]}
                         icon={<FaGithub size={"38px"} />}
                       />
@@ -446,7 +445,7 @@ export default function Home(props) {
                         _hover={{ color: "red.500" }}
                         _active={{ border: "0" }}
                         _focus={{ border: "0" }}
-                        boxSize="70px"
+                        boxSize="50px"
                         bg="white"
                         color="blue.700"
                         icon={<TiSocialLinkedinCircular size="52px" />}
@@ -458,13 +457,30 @@ export default function Home(props) {
             </ListItem>
             <ListItem
               id="experience"
-              height={["auto", "auto", "auto", "800px", "800px"]}
+              height={["auto", "auto", "auto", "auto", "auto"]}
             >
               <Divider color={"gray.500"} />
               <Box pl={["20px", "20px", "45px", "45px", "45px"]} pr="20px">
                 <Text variant="title">Experience</Text>
                 <Box display="flex" justifyContent="space-between">
-                  <Text variant="header">Frontend Developer</Text>
+                  <Box display="flex" flexDirection="row">
+                    <Text variant="header">Frontend Developer</Text>
+                    <Link onClick={onOpen} pl="7px">
+                      <IconButton
+                        _hover={{ color: "red.500" }}
+                        _active={{ border: "0" }}
+                        _focus={{ border: "0" }}
+                        bg="blue.700"
+                        borderRadius="full"
+                        color="white"
+                        onClick={() => {
+                          handleModal("rmate");
+                        }}
+                        icon={<FaRegImages size={"26px"} />}
+                      />
+                    </Link>
+                  </Box>
+
                   <Text variant="sans"> July 2020 - Present</Text>
                 </Box>
                 <Text variant="subHeader">MyCampusMate</Text>
@@ -501,6 +517,49 @@ export default function Home(props) {
                     control
                   </ListItem>
                 </UnorderedList>
+                {/* Add a slider to control height and width */}
+
+                {/* Add button that controls state to show or hide carousel */}
+                {/* <Box
+                  display={showCarousel ? "flex" : "none"}
+                  justifyContent="center"
+                  mt="30px"
+                >
+                  <Box height="30%" width="30%" alignItems="center">
+                    <AliceCarousel autoPlay autoPlayInterval="5000">
+                      <Image
+                        src={Social}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                      <Image
+                        src={posts}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                      <Image
+                        src={create}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                      <Image
+                        src={drop}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                      <Image
+                        src={type}
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                    </AliceCarousel>
+                  </Box>
+                </Box> */}
               </Box>
             </ListItem>
             <ListItem
@@ -573,6 +632,9 @@ export default function Home(props) {
                       bg="blue.700"
                       borderRadius="full"
                       color="white"
+                      onClick={() => {
+                        handleModal("ulg");
+                      }}
                       icon={<FaRegImages size={"26px"} />}
                     />
                   </Link>
@@ -1034,21 +1096,22 @@ export default function Home(props) {
         scrollBehavior="inside"
         size="full"
       >
-        <ModalOverlay />
+        {/* <ModalOverlay />
         <ModalContent>
           <ModalHeader>UCR Life Guide Images</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <UlgModal />
-          </ModalBody>
+          <ModalBody> */}
+        {/* <UlgModal /> */}
+        {getModal()}
+        {/* </ModalBody>
 
           <ModalFooter justify="center">
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            {/* <Button variant="ghost">Secondary Action</Button> */}
+            
           </ModalFooter>
-        </ModalContent>
+        </ModalContent> */}
       </Modal>
     </Stack>
   );
