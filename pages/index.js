@@ -27,6 +27,10 @@ import {
   TagLabel,
   TagLeftIcon,
   TagRightIcon,
+  Fade,
+  ScaleFade,
+  Slide,
+  SlideFade,
   Modal,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -400,8 +404,9 @@ export default function Home(props) {
                       mb={["", "", "30", "30px", "30px"]}
                       fontFamily="OpenSans-Regular"
                     >
-                      I'm an enthusiastic software engineer loves creating pixel
-                      perfect user interfaces for web and mobile applications.
+                      I'm an enthusiastic software engineer who loves creating
+                      pixel perfect user interfaces for web and mobile
+                      applications.
                     </Text>
                   </Box>
 
