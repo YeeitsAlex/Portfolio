@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import React, { useState } from "react";
 import {
+  AspectRatio,
   Box,
   Heading,
   Flex,
@@ -36,6 +37,7 @@ import {
 } from "@chakra-ui/react";
 
 import UlgModal from "../components/modals/ulgmodals";
+import EVidModal from "../components/modals/eVidmodal";
 import RMateModal from "../components/modals/rmatemodal";
 //Images
 import headshot from "../public/assets/HeadshotPicture.png";
@@ -82,6 +84,9 @@ export default function Home(props) {
     }
     if (modal === "rmate") {
       return <RMateModal />;
+    }
+    if (modal === "evid") {
+      return <EVidModal />;
     }
   };
 
@@ -888,7 +893,7 @@ export default function Home(props) {
                       icon={<FaGithub size={"38px"} />}
                     />
                   </Link>
-                  <Link
+                  {/* <Link
                     href="https://www.youtube.com/watch?v=sZfo3Zdixi4&t=0s"
                     mr="3px"
                     isExternal
@@ -900,6 +905,20 @@ export default function Home(props) {
                       bg="blue.700"
                       borderRadius="full"
                       color="white"
+                      icon={<ImYoutube2 size={"30px"} />}
+                    />
+                  </Link> */}
+                  <Link onClick={onOpen} mr="3px">
+                    <IconButton
+                      _hover={{ color: "red.500" }}
+                      _active={{ border: "0" }}
+                      _focus={{ border: "0" }}
+                      bg="blue.700"
+                      borderRadius="full"
+                      color="white"
+                      onClick={() => {
+                        handleModal("evid");
+                      }}
                       icon={<ImYoutube2 size={"30px"} />}
                     />
                   </Link>
@@ -1100,6 +1119,7 @@ export default function Home(props) {
         onClose={onClose}
         scrollBehavior="inside"
         size="full"
+        motionPreset="slideInRight"
       >
         {/* <ModalOverlay />
         <ModalContent>
