@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import React, { useState } from "react";
+import Typing from "react-typing-animation";
 import {
   AspectRatio,
   Box,
@@ -39,6 +40,7 @@ import {
 import UlgModal from "../components/modals/ulgmodals";
 import EVidModal from "../components/modals/eVidmodal";
 import RMateModal from "../components/modals/rmatemodal";
+import UlgDemoModal from "../components/modals/ulgdemomodal";
 //Images
 import headshot from "../public/assets/HeadshotPicture.png";
 
@@ -54,7 +56,6 @@ import {
 } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { DiFirebase, DiNetbeans } from "react-icons/di";
-import Typing from "react-typing-animation";
 import { SiExpo, SiMongodb, SiPostgresql } from "react-icons/si";
 import { ImYoutube2 } from "react-icons/im";
 
@@ -87,6 +88,9 @@ export default function Home(props) {
     }
     if (modal === "evid") {
       return <EVidModal />;
+    }
+    if (modal === "ulgdemo") {
+      return <UlgDemoModal />;
     }
   };
 
@@ -526,6 +530,9 @@ export default function Home(props) {
                     software development life cycle while using git for version
                     control
                   </ListItem>
+                  <ListItem>
+                    Perform core library updates and regression testing
+                  </ListItem>
                 </UnorderedList>
                 {/* Add a slider to control height and width */}
 
@@ -592,7 +599,6 @@ export default function Home(props) {
                     size="sm"
                   >
                     <FaReact />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">React-Native</TagLabel>
                   </Tag>
                   <Tag
@@ -603,7 +609,6 @@ export default function Home(props) {
                     size="sm"
                   >
                     <DiFirebase size="20px" />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">Firebase</TagLabel>
                   </Tag>
                   <Tag
@@ -620,7 +625,11 @@ export default function Home(props) {
                     </TagLabel>
                   </Tag>
                 </Box>
-                <Box mt={["", "", "", "7px", "7px"]}>
+                <Box
+                  mt={["", "", "", "7px", "7px"]}
+                  display="flex"
+                  flexDir="row"
+                >
                   <Link
                     href="https://github.com/YeeitsAlex/UCR-Life-Guide-App"
                     mr="3px"
@@ -634,7 +643,7 @@ export default function Home(props) {
                       icon={<FaGithub size={"38px"} />}
                     />
                   </Link>
-                  <Link onClick={onOpen}>
+                  <Link onClick={onOpen} mr="3px">
                     <IconButton
                       _hover={{ color: "red.500" }}
                       _active={{ border: "0" }}
@@ -647,6 +656,29 @@ export default function Home(props) {
                       }}
                       icon={<FaRegImages size={"26px"} />}
                     />
+                  </Link>
+                  <Link onClick={onOpen} align="middle">
+                    <Text
+                      _hover={{ color: "red.500" }}
+                      _active={{ border: "0" }}
+                      _focus={{ border: "0" }}
+                      bg="blue.700"
+                      borderRadius="full"
+                      alignSelf="center"
+                      height="40px"
+                      width="40px"
+                      color="white"
+                      fontWeight="bold"
+                      pt="8px"
+                      fontSize="16px"
+                      letterSpacing="0.5px"
+                      onClick={() => {
+                        handleModal("ulgdemo");
+                      }}
+                      // icon={<FaRegImages size={"26px"} />}
+                    >
+                      Demo
+                    </Text>
                   </Link>
                 </Box>
                 <UnorderedList
@@ -705,7 +737,6 @@ export default function Home(props) {
                     color="white"
                   >
                     <FaChartArea size="12px" />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">Highcharts</TagLabel>
                   </Tag>
                   <Tag
@@ -716,7 +747,6 @@ export default function Home(props) {
                     size="sm"
                   >
                     <SiMongodb color="white" size="12px" />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px" color="white">
                       MongooseDB
                     </TagLabel>
@@ -779,7 +809,6 @@ export default function Home(props) {
                     size="sm"
                   >
                     <SiPostgresql />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">Postgres</TagLabel>
                   </Tag>
                   <Tag
@@ -791,7 +820,6 @@ export default function Home(props) {
                     color="white"
                   >
                     <FaJava size="12px" />
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">Java</TagLabel>
                   </Tag>
                   <Tag
@@ -864,7 +892,6 @@ export default function Home(props) {
                     size="sm"
                     color="white"
                   >
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">C/Embedded C</TagLabel>
                   </Tag>
                   <Tag
@@ -875,7 +902,6 @@ export default function Home(props) {
                     size="sm"
                     color="white"
                   >
-                    {/* <Text variant="subHeader">MyCampusMate</Text> */}
                     <TagLabel ml="3px">Atmel Studio</TagLabel>
                   </Tag>
                 </Box>
@@ -893,21 +919,6 @@ export default function Home(props) {
                       icon={<FaGithub size={"38px"} />}
                     />
                   </Link>
-                  {/* <Link
-                    href="https://www.youtube.com/watch?v=sZfo3Zdixi4&t=0s"
-                    mr="3px"
-                    isExternal
-                  >
-                    <IconButton
-                      _hover={{ color: "red.500" }}
-                      _active={{ border: "0" }}
-                      _focus={{ border: "0" }}
-                      bg="blue.700"
-                      borderRadius="full"
-                      color="white"
-                      icon={<ImYoutube2 size={"30px"} />}
-                    />
-                  </Link> */}
                   <Link onClick={onOpen} mr="3px">
                     <IconButton
                       _hover={{ color: "red.500" }}
@@ -1083,32 +1094,6 @@ export default function Home(props) {
                   <Text></Text>
                 </Box>
               </Box>
-              {/* <Box display="flex" mt="70px" ml="35px" align="center">
-                <Image
-                  // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-                  src={r}
-                  mb={["", "", "30px", "30px", "30px"]}
-                  mr={["0px", "0px", "7px", "7px", "7px"]}
-                  boxSize="50px"
-                  // size="10px"
-                />
-                <Image
-                  // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-                  src={n}
-                  mb={["", "", "30px", "30px", "30px"]}
-                  mr={["0px", "0px", "7px", "7px", "7px"]}
-                  boxSize="50px"
-                  // size="10px"
-                />
-                <Image
-                  // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-                  src={c}
-                  mb={["", "", "30px", "30px", "30px"]}
-                  mr={["0px", "0px", "7px", "7px", "7px"]}
-                  boxSize="50px"
-                  // size="10px"
-                />
-              </Box> */}
             </ListItem>
           </List>
         </Flex>
@@ -1121,22 +1106,7 @@ export default function Home(props) {
         size="full"
         motionPreset="slideInRight"
       >
-        {/* <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>UCR Life Guide Images</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody> */}
-        {/* <UlgModal /> */}
         {getModal()}
-        {/* </ModalBody>
-
-          <ModalFooter justify="center">
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            
-          </ModalFooter>
-        </ModalContent> */}
       </Modal>
     </Stack>
   );
