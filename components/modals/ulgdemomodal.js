@@ -56,12 +56,31 @@ const UlgDemoModal = () => {
         <ModalCloseButton />
         <ModalBody>
           {/* <UlgModal /> */}
+          <Text variant="subHeader" color="black">
+            Note: Your email for your expo account must be authorized before the
+            demo works
+          </Text>
+          <Text variant="subHeader">
+            Please contact through{" "}
+            <Link
+              href="mailto:yeeitsalexx@gmail.com"
+              color="blue.400"
+              textDecoration="underline"
+              _hover={{
+                color: "red.500",
+                textDecoration: "underline",
+              }}
+            >
+              email
+            </Link>{" "}
+            for assistance
+          </Text>
           <Box display="flex" flexDirection="row" flexWrap="wrap">
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
               src={demo}
-              height={["50%", "50%", "50%", "50%", "50%"]}
-              width={["50%", "50%", "50%", "50%", "50%"]}
+              height={["60%", "60%", "50%", "50%", "50%"]}
+              width={["60%", "60%", "50%", "50%", "50%"]}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
             />
