@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import React, { useState } from "react";
 import Typing from "react-typing-animation";
+import NextImage from "next/image";
 import {
   AspectRatio,
   Box,
@@ -58,6 +59,7 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { DiFirebase, DiNetbeans } from "react-icons/di";
 import { SiExpo, SiMongodb, SiPostgresql } from "react-icons/si";
 import { ImYoutube2 } from "react-icons/im";
+import head from "next/head";
 
 export default function Home(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -127,6 +129,27 @@ export default function Home(props) {
             alignItems={["left", "left", "center", "center", "center"]}
           >
             <Flex>
+              <Box
+                borderRadius="full"
+                // boxSize={["50px", "50px", "160px", "160px", "160px"]}
+                height={["50px", "50px", "200px", "200px", "200px"]}
+                width={["50px", "50px", "200px", "200px", "200px"]}
+                border="1px"
+                borderWidth={["3px", "3px", "7px", "7px", "7px"]}
+                borderColor="blue.700"
+                mb={["", "", "30px", "30px", "30px"]}
+                pos="relative"
+                overflow="hidden"
+              >
+                <NextImage
+                  src={headshot}
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                  priority={true}
+                />
+              </Box>
+              {/* 
               <Image
                 borderRadius="full"
                 boxSize={["50px", "50px", "160px", "160px", "160px"]}
@@ -136,7 +159,7 @@ export default function Home(props) {
                 src={headshot}
                 mb={["", "", "30px", "30px", "30px"]}
                 // alt="Alex Headshot"
-              />
+              /> */}
               <Heading
                 display={["block", "block", "none", "none", "none"]}
                 alignSelf="center"
@@ -478,6 +501,61 @@ export default function Home(props) {
                 <Text variant="title">Experience</Text>
                 <Box display="flex" justifyContent="space-between">
                   <Box display="flex" flexDirection="row">
+                    <Text variant="header">Software Engineer</Text>
+                    {/* <Link onClick={onOpen} pl="7px">
+                      <IconButton
+                        _hover={{ color: "red.500" }}
+                        _active={{ border: "0" }}
+                        _focus={{ border: "0" }}
+                        bg="blue.700"
+                        borderRadius="full"
+                        color="white"
+                        onClick={() => {
+                          handleModal("rmate");
+                        }}
+                        icon={<FaRegImages size={"26px"} />}
+                      />
+                    </Link> */}
+                  </Box>
+
+                  <Text variant="sans"> January 2021 - Present </Text>
+                </Box>
+                <Text variant="subHeader">Stream Engine</Text>
+                <UnorderedList
+                  fontFamily="OpenSans-Regular"
+                  pl="25px"
+                  pt="7px"
+                  color="gray.500"
+                  fontSize={["10px", "10px", "16px", "16px", "16px"]}
+                  pr={["0px", "0px", "100px", "200px", "200px"]}
+                  spacing={3}
+                >
+                  <ListItem>
+                    Designed client and customer facing single-page web
+                    applications from end-to-end using React (Next.js) and
+                    TypeScript
+                  </ListItem>
+                  <ListItem>
+                    Identified defects and provided solutions with user
+                    experience to product managers and UI designers, improving
+                    customer interaction rate by 50%
+                  </ListItem>
+                  <ListItem>
+                    Productionalized Figma designs using NPM libraries and
+                    Chakra-UI to create 20+ reusable custom components
+                  </ListItem>
+                  <ListItem>
+                    Organized/Executed RESTful APIs with Redux-toolkit to manage
+                    large sets of JSON data to implement core features across
+                    the web application
+                  </ListItem>
+                  <ListItem>
+                    Architected and developed frontend code foundation for SPA
+                    alpha product creating more than 30 responsive pages
+                  </ListItem>
+                </UnorderedList>
+                <Box display="flex" justifyContent="space-between" pt="20px">
+                  <Box display="flex" flexDirection="row">
                     <Text variant="header">Frontend Developer</Text>
                     <Link onClick={onOpen} pl="7px">
                       <IconButton
@@ -495,7 +573,7 @@ export default function Home(props) {
                     </Link>
                   </Box>
 
-                  <Text variant="sans"> July 2020 - Present</Text>
+                  <Text variant="sans"> July 2020 - January 2021</Text>
                 </Box>
                 <Text variant="subHeader">MyCampusMate</Text>
                 <UnorderedList
@@ -508,12 +586,9 @@ export default function Home(props) {
                   spacing={3}
                 >
                   <ListItem>
-                    Developed UI/UX for RMate mobile application with supplied
-                    wireframes using react-native
-                  </ListItem>
-                  <ListItem>
-                    Integrate API (JSON) from Heroku endpoints to send and
-                    recieve data from the python(flask) database
+                    Built, tested and shipped user facing code for RMate
+                    iOS/Android mobile application using React-Native and
+                    JavaScript
                   </ListItem>
                   <ListItem>
                     Build scalable and maintainable code to implement new,
@@ -522,61 +597,20 @@ export default function Home(props) {
                     posts and manage profile pages
                   </ListItem>
                   <ListItem>
-                    Maintained states and dispatched actions using redux while
-                    also using reducers to manage store state tree
+                    Worked with backend team to design and integrate RESTful
+                    APIs to new and existing components using Redux to call
+                    Heroku endpoints in order to send and fetch JSON data
                   </ListItem>
                   <ListItem>
-                    Maintain proper documentation and bug reports throughout the
-                    software development life cycle while using git for version
-                    control
+                    Maintained proper documentation and bug reports throughout
+                    the software development life cycle while using git for
+                    version control
                   </ListItem>
                   <ListItem>
-                    Perform core library updates and regression testing
+                    Created extensive unit and regression tests before deploying
+                    updates to the App Store using AppCenter
                   </ListItem>
                 </UnorderedList>
-                {/* Add a slider to control height and width */}
-
-                {/* Add button that controls state to show or hide carousel */}
-                {/* <Box
-                  display={showCarousel ? "flex" : "none"}
-                  justifyContent="center"
-                  mt="30px"
-                >
-                  <Box height="30%" width="30%" alignItems="center">
-                    <AliceCarousel autoPlay autoPlayInterval="5000">
-                      <Image
-                        src={Social}
-                        width="100%"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                      <Image
-                        src={posts}
-                        width="100%"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                      <Image
-                        src={create}
-                        width="100%"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                      <Image
-                        src={drop}
-                        width="100%"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                      <Image
-                        src={type}
-                        width="100%"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                    </AliceCarousel>
-                  </Box>
-                </Box> */}
               </Box>
             </ListItem>
             <ListItem
@@ -979,11 +1013,11 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">C++</Text>
+                  <Text variant="skill">JavaScript,</Text>
+                  <Text variant="skill">HTML5,</Text>
+                  <Text variant="skill">CSS3,</Text>
+                  <Text variant="skill">C++,</Text>
                   <Text variant="skill">Python</Text>
-                  <Text variant="skill">HTML5</Text>
-                  <Text variant="skill">CSS3</Text>
-                  <Text variant="skill">JavaScript</Text>
                   <Text></Text>
                 </Box>
                 <Box display="flex" mt="20px">
@@ -999,7 +1033,7 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">PostgresSQL</Text>
+                  <Text variant="skill">PostgresSQL,</Text>
                   <Text variant="skill">Firebase</Text>
                   <Text></Text>
                 </Box>
@@ -1016,11 +1050,11 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">React</Text>
-                  <Text variant="skill">React-Native</Text>
-                  <Text variant="skill">NextJs</Text>
-                  <Text variant="skill">Chakra UI</Text>
-                  <Text variant="skill">Bootstrap</Text>
+                  <Text variant="skill">React,</Text>
+                  <Text variant="skill">React-Native,</Text>
+                  <Text variant="skill">Next.Js,</Text>
+                  <Text variant="skill">Chakra-UI,</Text>
+                  <Text variant="skill">Bootstrap,</Text>
                   <Text variant="skill">Angular</Text>
                   <Text></Text>
                 </Box>
@@ -1037,17 +1071,16 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">Git</Text>
-                  <Text variant="skill">Visual Studio Code</Text>
-                  <Text variant="skill">Expo CLI</Text>
-                  <Text variant="skill">NPM</Text>
-                  <Text variant="skill">Adobe XD</Text>
-                  <Text variant="skill">Google Test Framework</Text>
-                  <Text variant="skill">XCode</Text>
-                  <Text variant="skill">Postman</Text>
-                  <Text variant="skill">Heroku</Text>
-                  <Text variant="skill">Redux</Text>
-                  <Text variant="skill">APIs</Text>
+                  <Text variant="skill">Redux/Redux-Toolkit,</Text>
+                  <Text variant="skill">Git,</Text>
+                  <Text variant="skill">Bitbucket,</Text>
+                  <Text variant="skill">Visual Studio Code,</Text>
+                  <Text variant="skill">NPM,</Text>
+                  <Text variant="skill">Figma,</Text>
+                  <Text variant="skill">Google Test Framework,</Text>
+                  <Text variant="skill">Postman,</Text>
+                  <Text variant="skill">Heroku,</Text>
+                  <Text variant="skill">RESTful APIs</Text>
                 </Box>
                 <Box display="flex" mt="20px">
                   <Text variant="header">Concepts:</Text>
@@ -1062,12 +1095,11 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">Object-Oriented Programming</Text>
-                  <Text variant="skill">Data Structures and Algorithms</Text>
-                  <Text variant="skill">Design Patterns</Text>
-                  <Text variant="skill">Software Testing</Text>
-                  <Text variant="skill">Agile/Scrum</Text>
-
+                  <Text variant="skill">Object-Oriented Programming,</Text>
+                  <Text variant="skill">Data Structures and Algorithms,</Text>
+                  <Text variant="skill">Design Patterns,</Text>
+                  <Text variant="skill">Software Testing,</Text>
+                  <Text variant="skill">Agile/Scrum,</Text>
                   <Text variant="skill">Technical Communications</Text>
                 </Box>
                 <Box display="flex" mt="20px">
@@ -1083,13 +1115,13 @@ export default function Home(props) {
                   display="flex"
                   flexWrap="wrap"
                 >
-                  <Text variant="skill">Leadership</Text>
+                  <Text variant="skill">Leadership,</Text>
                   <Text variant="skill">
-                    Effective Writing and Communication
+                    Effective Writing and Communication,
                   </Text>
-                  <Text variant="skill">Time Management</Text>
-                  <Text variant="skill">Teamwork</Text>
-                  <Text variant="skill">Critical Thinking</Text>
+                  <Text variant="skill">Time Management,</Text>
+                  <Text variant="skill">Teamwork,</Text>
+                  <Text variant="skill">Critical Thinking,</Text>
                   <Text variant="skill">Problem Solving</Text>
                   <Text></Text>
                 </Box>
