@@ -224,34 +224,30 @@ export default function Home(props) {
             >
               <Link
                 href="#about"
-                // variant={link === "about" ? "nav-link-pressed" : "nav-link"}
-                variant="nav_link"
+                variant={link === "about" ? "nav-link-pressed" : "nav-link"}
                 onClick={() => handleClick("about")}
               >
                 ABOUT
               </Link>
               <Link
                 href="#experience"
-                // variant={
-                //   link === "experience" ? "nav-link-pressed" : "nav-link"
-                // }
-                variant="nav_link"
+                variant={
+                  link === "experience" ? "nav-link-pressed" : "nav-link"
+                }
                 onClick={() => handleClick("experience")}
               >
                 EXPERIENCE
               </Link>
               <Link
                 href="#projects"
-                // variant={link === "projects" ? "nav-link-pressed" : "nav-link"}
-                variant="nav_link"
+                variant={link === "projects" ? "nav-link-pressed" : "nav-link"}
                 onClick={() => handleClick("projects")}
               >
                 PROJECTS
               </Link>
               <Link
                 href="#skills"
-                // variant={link === "skills" ? "nav-link-pressed" : "nav-link"}
-                variant="nav_link"
+                variant={link === "skills" ? "nav-link-pressed" : "nav-link"}
                 onClick={() => handleClick("skills")}
               >
                 SKILLS
