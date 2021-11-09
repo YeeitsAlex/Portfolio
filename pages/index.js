@@ -421,7 +421,7 @@ export default function Home(props) {
 
                   <Link
                     width={["45%", "45%", "50%", "18%", "30%"]}
-                    href="https://drive.google.com/file/d/1b9kJvHPl-_V24JnY3Wc6qyXTbdkBRfsr/view?usp=sharing"
+                    href="https://drive.google.com/file/d/15wxftaF5E8uDG2u3sid4O1tvwPS5SXnR/view?usp=sharing"
                     _focus={{ borderColor: "white" }}
                   >
                     <Text
