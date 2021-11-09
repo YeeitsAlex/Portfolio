@@ -224,30 +224,34 @@ export default function Home(props) {
             >
               <Link
                 href="#about"
-                variant={link === "about" ? "nav-link-pressed" : "nav-link"}
+                // variant={link === "about" ? "nav-link-pressed" : "nav-link"}
+                variant="nav_link"
                 onClick={() => handleClick("about")}
               >
                 ABOUT
               </Link>
               <Link
                 href="#experience"
-                variant={
-                  link === "experience" ? "nav-link-pressed" : "nav-link"
-                }
+                // variant={
+                //   link === "experience" ? "nav-link-pressed" : "nav-link"
+                // }
+                variant="nav_link"
                 onClick={() => handleClick("experience")}
               >
                 EXPERIENCE
               </Link>
               <Link
                 href="#projects"
-                variant={link === "projects" ? "nav-link-pressed" : "nav-link"}
+                // variant={link === "projects" ? "nav-link-pressed" : "nav-link"}
+                variant="nav_link"
                 onClick={() => handleClick("projects")}
               >
                 PROJECTS
               </Link>
               <Link
                 href="#skills"
-                variant={link === "skills" ? "nav-link-pressed" : "nav-link"}
+                // variant={link === "skills" ? "nav-link-pressed" : "nav-link"}
+                variant="nav_link"
                 onClick={() => handleClick("skills")}
               >
                 SKILLS
@@ -401,7 +405,7 @@ export default function Home(props) {
                           textDecoration: "underline",
                         }}
                       >
-                        YEEITSALEXX@GMAIL.COM
+                        YEE.ALEXANDER1@GMAIL.COM
                       </Link>
                     </ListItem>
                   </List>
