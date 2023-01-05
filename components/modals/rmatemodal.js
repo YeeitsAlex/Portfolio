@@ -44,7 +44,7 @@ import create from "../../public/assets/rmate/create.png";
 import drop from "../../public/assets/rmate/drop.png";
 import posts from "../../public/assets/rmate/post.png";
 import social from "../../public/assets/rmate/Social.png";
-import type from "../../public/assets/rmate/type.png";
+import userType from "../../public/assets/rmate/type.png";
 
 const RMateModal = () => {
   return (
@@ -90,7 +90,7 @@ const RMateModal = () => {
             />
             <Image
               // boxSize={["50px", "50px", "160px", "160px", "160px"]}
-              src={type}
+              src={userType}
               mb={["", "", "30px", "30px", "30px"]}
               mr={["0px", "0px", "7px", "7px", "7px"]}
               height={["100%", "100%", "30%", "30%", "30%"]}
