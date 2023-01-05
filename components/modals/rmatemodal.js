@@ -51,7 +51,7 @@ const RMateModal = () => {
     <Box>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Some of my work from RMate</ModalHeader>
+        <ModalHeader>Some of my work from RMate...</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           {/* <UlgModal /> */}
