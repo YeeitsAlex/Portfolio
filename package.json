@@ -13,12 +13,14 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "babel-polyfill": "^6.26.0",
+    "eslint-config-next": "^13.1.1",
     "framer-motion": "^3.2.0",
-    "next": "10.0.4",
+    "next": "^13.1.2-canary.0",
     "next-images": "^1.6.2",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.1.0",
-    "react-typing-animation": "^1.6.2"
+    "react-typing-animation": "^1.6.2",
+    "sharp": "^0.31.3"
   }
 }
